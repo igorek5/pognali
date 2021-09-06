@@ -4,13 +4,183 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HTML Academy:</title>
-  <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="fonts/" as="font" crossorigin="anonymous">
+  <title>Погнали</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/bloggersans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/bloggersans-light.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="page-body">
+  <header class="page-header open-menu">
+    <a class="page-header__logo logo">
+      <svg class="logo__icon" width="96" height="15" viewBox="0 0 96 15" fill="white" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="96" height="15">
+          <rect width="96" height="15" fill="url(#pattern0)" />
+        </mask>
+        <g mask="url(#mask0)">
+          <rect width="96" height="15" />
+        </g>
+        <defs>
+          <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0" transform="scale(0.00787402 0.05)" />
+          </pattern>
+          <image id="image0" width="127" height="20"
+            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH8AAAAUCAYAAACkjuKKAAAFjUlEQVRoge2Ze4hXRRTHP6u59rAsy8xeaqFGZWmrpj3UwspCioge9iCyJ0GlkRWkPUgqsrAS/GMpwkijrDTL0h6Wm7U9rAxMqk17KoTS1oZbi7kbh74XhuHM3d9v9yqL7Rcu/H7nzpw5M2fmnO+cW9F3wPgW2o9hwJoC9HSi/TgKuBE4ExgAVAK/AR8CTwFLgGYbpUvnYu9SmA6sBW4CBsvxhl7ARGAR8BbQm07n71Iwx98PdG1lUqcDbwDdO52/a2AgcG9iJtsdWZVFh90SHc7PWZLZQP//4wp3YExyTvwG5f1fgJnAbdH7ySnnL86ZZ2qHpbAHcLTyTKOM2dBB17EC6AfsD2wGfuoANpWCI5w284D1+n234/xBOzLsjxazrAdWK8+slEE/A/eJiMR4UjeH1PMxcHvQ5zygRvpHJGyxsPgyUAtc47w3YjQN+BH4Xvba76+Bq7QpzgXeBZYBJ0b9h7dis/dMC/pPDHSflJjDOK2nzf9BoEfw7hOn/argdz/nfUvqqleRMABN4vhIFl71LPw8AkzJ0ZFhE3BxZOh7wNgS+o4HfgW+DIhrvVJSQ9Cui5w4MJCdrYU29AReA07JGcvanhGE1niccXJeOXhcazRYDD2Lwg3SXR/oOgt4PSLoNRrX/NcNmANcpmuchflZalelKHBMZNuqHXHy55boeMPBwJsysFz0AcZEC7KfszEPiRyPGG+Gea043jAhyqneOG3FqMDxhn0i3bZG852b2RhFV8M24AZgb23mWdowXymKxY43zCza+acB1zly2511KjbEME5QXea1c7V4SaXzLiY+3tUn6zdBacPDJnGUFFq7UpWKvChrYzwnDuLhyITcNvwr4loxLDJMBZYX7fxbHdk6VZ0GifTd7LQ5ATg5oXOjKlXZcxgwMscxQxUOs2dUjr1e/rcUMUQLaJxkRk7/PEyVYytkd1swQyc8hdQGtPXs7shXKFo8RhRuisB4R8dFwLf63azcNExEKoRdS953+v8D/FCGbbPLaOuF+wu0YQ1Nyp9DNI+diXHt2Hify/ZwAxhhfTVsVOTJt1OyeyTboLwTY6kj61ugLaWgq3hDiLrA8SEW7WTbLEIucAheqdioG0SNUuTVseMp+ORvdWS9NIHmSN7TabutQFtKwXaN2S1ou6/CdHwD6lGe6nahSSkjPAzLxIvyUkCMt3VzqkylyCJPfpNTFLHFnBzJuifyfl1BdnwgspM9S6NrU4g4nfRWtSyERbNbcsazNTxQxasQf7fR/sqAxaNTfIWzIfPQVYy/QYfSNsHhcfuic/5ix7FzdW9dqkW6w7kmtchRRWC6Jpuhvwo3HpY518CnJVsOHATcCRyb6L+nTtho5513sykFIfu3iHkpsKVMHVOiit5YFbmGh42KZvsPA39FMgurd+l78uLEQoWlyJ2JJ0QoQ1SqhF2rXB9X80JMSswH5dpSkHei7ykz12e40JFVxWVgc/6fUaMG8vGH8zbrs1HFhnKwVjkuQ6y/KUfX744sno/HRbI08J1OdluwVUUVD8uj7xeeDVlk+DSh4x3ggVZ0ePPH4ViuvIvqxCFmJjpmeCj6TPhCNNFngHP0YaQ1PA+cGk2iOjKyOkfHEm24DB8BX0RtNsvGDLZRnw3+P6pvBSnCuUXFoHAcq69/Bix0QrJVLC93bFgY2TBfv9c5PvgmKNVmWKmDkqFOY3lY4MhqY45jtX1U7hypDwQrEgpDHKf6+HqFRu+b8V7AldoIQ1USbdRHnRqF+thRGUbIpjU6RXnoo+8DjaqGeSekm0KhlUpfSnAAK0Jdr/x4gJxqi2t1A3OeyS4RkQvHOVS6bQ0staXCfWjDiw7ZtA86VnewyqLlZ4+h2y0p+3xrNqR4hfEGSxmW+y06Gbe5Vrr/A/Avocc+F49G4KEAAAAASUVORK5CYII=" />
+        </defs>
+      </svg>
+    </a>
+    <nav class="page-header__nav main-nav open">
+      <button class="main-nav__toggle" type="button" aria-label="Открыть/закрыть меню"></button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">О сервисе</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Направление</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Попутчики</a>
+          </li>
+        </ul>
 
+        <a class="main-nav__button button" href="#">Авторизация</a>
+
+        <ul class="main-nav__contacts contacts-menu">
+          <li class="contacts-menu__item">
+            <a class="contacts-menu__link" href="tel:+78005558628">
+              8800555-86-28
+            </a>
+          </li>
+          <li class="contacts-menu__item">
+            <a class="contacts-menu__link" href="mailto:mail@htmlacademy.ru">
+              mail@htmlacademy.ru
+            </a>
+          </li>
+        </ul>
+
+        <ul class="main-nav__social social">
+          <li class="social__item">
+            <a class="social__link" href="https://facebook.com/htmlacademy" aria-label="Мы в фейсбуке"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://vk.com/htmlacademy" aria-label="Мы в контакте"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://instagram.com/htmlacademy" aria-label="Мы в инстаграме"></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <h1 class="visually-hidden">Сервис по подбору попутчиков «Погнали»</h1>
+    <section class="promo">
+      <h2 class="promo__title">В путешествие с крутыми попутчиками!</h2>
+      <div class="wrapper">
+        <img class="promo__image" src="img/content/traveller@1x.png" width="192" height="255" alt="Логотип попутчика">
+        <div class="promo__contact contact">
+          <ul class="contact__list">
+            <li class="contact__item">
+              <a class="contact__link contact__link--call" href="tel:88005558628"
+                aria-label="Позвонить нам по телефону: 88005558628"></a>
+            </li>
+            <li>
+              <a class="contact__link contact__link--mail" href="mailto:mail@htmlacademy.ru"
+                aria-label="Написать нам e-mail: mail@htmlacademy.ru"></a>
+            </li>
+          </ul>
+          <a class="contact__button button" href="#">Авторизация</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="comment">
+      <div class="wrapper">
+        <h2 class="visually-hidden">Комментарий</h2>
+        <p class="comment__text">«Лучшее приложение, что я видел в&nbspжизни!»</p>
+        <p class="comment__author">Мурат Эльтазин<br> главный редактор газеты «гаджетлайф»</p>
+      </div>
+    </section>
+
+    <section class="instruction">
+      <h2 class="visually-hidden">Инструкция</h2>
+      <div class="wrapper">
+        <ul class="instruction__list">
+          <li class="instruction__item">
+            <p class="instruction__text">Выберите направление</p>
+          </li>
+          <li class="instruction__item instruction__item--orange">
+            <p class="instruction__text">Изучите идеи путешественников</p>
+          </li>
+          <li class="instruction__item instruction__item--yellow-dark">
+            <p class="instruction__text">Находите тех, кто похож на вас</p>
+          </li>
+          <li class="instruction__item instruction__item--yellow">
+            <p class="instruction__text">Путешествуйте вместе!</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="service">
+      <div class="wrapper">
+        <div class="service__wrapper">
+          <h2 class="service__title">О сервисе</h2>
+          <p class="service__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь
+            своими
+            идеями путешествий и черпайте вдохновение в чужих.</p>
+          <p class="service__desc">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="direction">
+      <h2 class="direction__title">Направления</h2>
+      <p class="direction__text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы
+        отправиться и чем можно там заняться.</p>
+      <ul class="direction__list">
+        <li class="direction__item">
+          <picture>
+            <img class="direction__image" src="img/content/thailand@1x.jpg" srcset="img/content/thailand@2x.jpg"
+              width="270" height="110" alt="Таиланд">
+          </picture>
+          <a class="direction__link" href="#">
+            <h3 class="direction__country">Таиланд</h3>
+            <p class="direction__desc">Джунгли зовут!</p>
+            <span class="direction__users">18321</span>
+          </a>
+        </li>
+        <li class="direction__item">
+          <picture>
+            <img class="direction__image" src="img/content/france@1x.jpg" srcset="img/content/france@2x.jpg" width="270"
+              height="110" alt="Таиланд">
+          </picture>
+          <a class="direction__link" href="#">
+            <h3 class="direction__country">Франция</h3>
+            <p class="direction__desc">Трэ бьен, манифик!</p>
+            <span class="direction__users">12518</span>
+          </a>
+        </li>
+        <li class="direction__item">
+          <picture>
+            <img class="direction__image" src="img/content/czech@1x.jpg" srcset="img/content/czech@2x.jpg" width="270"
+              height="110" alt="Таиланд">
+          </picture>
+          <a class="direction__link" href="#">
+            <h3 class="direction__country">Чехия</h3>
+            <p class="direction__desc">Закоулки старой Европы</p>
+            <span class="direction__users">5326</span>
+          </a>
+        </li>
+      </ul>
+      <a class="direction__button" href="#">Показать все</a>
+    </section>
+  </main>
 </body>
 
 </html>

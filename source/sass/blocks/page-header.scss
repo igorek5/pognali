@@ -1,0 +1,19 @@
+.page-header {
+  position: relative;
+
+  padding: 20px 25px 25px;
+
+  color: $color-white;
+
+  background-color: $color-basic-blue;
+}
+
+.page-header.open-menu {
+  color: $color-basic-blue;
+
+  background-color: $color-white;
+}
+
+.page-header__logo:not(a[href]) {
+  pointer-events: none;
+}

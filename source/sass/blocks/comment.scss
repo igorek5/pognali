@@ -1,0 +1,22 @@
+.comment {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 25px;
+  padding-right: 85px;
+  color: $color-white;
+
+  background-color: $color-basic-blue;
+}
+
+.comment__text {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-weight: 300;
+}
+
+.comment__author {
+  margin: 0;
+
+  font-weight: 700;
+}

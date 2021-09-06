@@ -1,0 +1,40 @@
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 280px;
+}
+
+.contact__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.contact__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+
+  background-color: $color-orange;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+
+  &--call {
+    background-image: url("../../img/svg/sprite/icon_call.svg");
+  }
+
+  &--mail {
+    background-color: $color-orange-light;
+    background-image: url("../../img/svg/sprite/icon_mail.svg");
+  }
+}
+
+.contact__button {
+  min-width: 200px;
+  width: auto;
+}

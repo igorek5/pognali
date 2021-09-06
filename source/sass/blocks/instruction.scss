@@ -1,0 +1,60 @@
+.instruction {
+  background-color: $color-blue-dark;
+  padding-bottom: 40px;
+}
+
+.instruction__list {
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  counter-reset: number 0;
+}
+
+.instruction__item {
+  position: relative;
+
+  margin-top: -15px;
+  padding: 25px 0 25px 25px;
+
+  background-color: $color-orange;
+  border-radius: 10px;
+
+  counter-increment: number;
+
+  &--orange {
+    background-color: $color-orange-light;
+  }
+
+  &--yellow-dark {
+    background-color: $color-yellow-dark;
+  }
+
+  &--yellow {
+    background-color: $color-yellow;
+  }
+
+  ::before {
+    content: counter(number);
+    position: absolute;
+    top: 22px;
+    right: 21px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    color: $color-white;
+  }
+}
+
+.instruction__text {
+  width: 150px;
+  margin: 0;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+}

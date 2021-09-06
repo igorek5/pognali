@@ -1,26 +1,19 @@
-// Vendor
-@import "vendor/normalize";
-
 // Global
 @import "global/variables";
 @import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
+@import "global/mixins";
 @import "global/containers";
 
 // Blocks
 @import "blocks/button";
-@import "blocks/intro";
 @import "blocks/page-header";
+@import "blocks/logo";
 @import "blocks/main-nav";
+@import "blocks/contacts-menu";
 @import "blocks/promo";
-@import "blocks/programs";
-@import "blocks/advantages";
-@import "blocks/example";
-@import "blocks/slider";
-@import "blocks/contacts";
-@import "blocks/page-footer";
-@import "blocks/social";
-@import "blocks/form";
-@import "blocks/catalog";
-@import "blocks/catalog-plus.scss";
+@import "blocks/comment";
+@import "blocks/instruction";
+@import "blocks/contact";
+@import "blocks/service";
